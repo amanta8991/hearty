@@ -672,6 +672,10 @@
   .header.active .nav-open-btn .line{
     background-color: var(--black);
   }
+
+  .header.active .navbar-link .span {
+    color: var(--white);
+  }
   
   .navbar .close-btn ion-icon { --ionicon-stroke-width: 40px; }
   
@@ -706,6 +710,12 @@
     color: var(--gold-crayola);
     transform: translateX(20px);
   }
+
+  .header.active .navbar-link:is(:hover, :focus-visible, .active) .span {
+    color: var(--gold-crayola);
+    transform: translateX(20px);
+  }
+  
   
   .navbar-link .separator {
     position: absolute;
