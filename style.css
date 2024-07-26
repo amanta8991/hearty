@@ -4,7 +4,7 @@
      * COLORS
      */
   
-    --gold-crayola: hsl(38, 61%, 73%);
+    --gold-crayola: #b30400;
     --quick-silver: hsla(0, 0%, 65%, 1);
     --davys-grey: hsla(30, 3%, 34%, 1);
     --smoky-black-1: hsla(40, 12%, 5%, 1);
@@ -565,19 +565,9 @@
     100% { background-position: 0%; }
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #TOPBAR
-  \*-----------------------------------*/
-  
-  .topbar { display: none; }
-  
-  
-  
-  
+  .preload img{
+    width: 150px;
+  }
   
   /*-----------------------------------*\
     #HEADER
@@ -1465,57 +1455,10 @@
   
     .contact-number { --fontSize-body-1: 3rem; }
   
-  
-  
-    /**
-     * TOPBAR
-     */
-  
-    .topbar {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding-block: 10px;
-      border-block-end: 1px solid var(--white-alpha-20);
-      z-index: 4;
-      transition: var(--transition-1);
-    }
-  
-    .topbar:has(~ .header.active) { transform: translateY(-100%); }
-  
-    .topbar-item:not(.link),
-    .topbar .separator { display: none; }
-  
-    .topbar .container,
-    .topbar-item {
-      display: flex;
-      align-items: center;
-    }
-  
-    .topbar .container {
-      justify-content: center;
-      gap: 30px;
-    }
-  
-    .topbar-item { gap: 6px; }
-  
-    .topbar-item ion-icon { --ionicon-stroke-width: 60px; }
-  
-    .topbar-item .span { font-size: var(--fontSize-label-1); }
-  
-    .topbar .link { transition: var(--transition-1); }
-  
-    .topbar .link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
-  
-  
-  
+
     /**
      * HEADER
      */
-  
-    .header { top: 51px; }
   
     .header.active { top: 0; }
   
@@ -1757,15 +1700,6 @@
   
   
   
-    /**
-     * TOPBAR
-     */
-  
-    .topbar-item:not(.link) { display: flex; }
-  
-    .topbar .item-2 { margin-inline-end: auto; }
-  
-  
   
     /**
      * SERVICE
@@ -1922,18 +1856,7 @@
       margin-inline: auto;
     }
   
-  
-  
-    /**
-     * TOPBAR
-     */
-  
-    .topbar .container { max-width: unset; }
-  
-    .topbar .separator { display: block; }
-  
-  
-  
+
     /**
      * HEADER
      */
