@@ -189,7 +189,6 @@
   \*-----------------------------------*/
   
   .display-1,
-  .headline-1,
   .headline-2,
   .title-1,
   .title-2,
@@ -206,7 +205,13 @@
     line-height: var(--lineHeight-1);
   }
   
-  .headline-1 { font-size: var(--fontSize-headline-1); }
+  .headline-1 { 
+    font-size: var(--fontSize-headline-1); 
+    color: var(--black);
+    font-family: var(--fontFamily-forum);
+    font-weight: var(--weight-regular);
+    line-height: var(--lineHeight-2);
+  }
   
   .headline-2 {
     font-size: var(--fontSize-headline-2);
@@ -256,7 +261,10 @@
     transform: rotate(45deg);
   }
   
-  .contact-label { font-weight: var(--weight-bold); }
+  .contact-label { 
+    font-weight: var(--weight-bold); 
+    color: var(--smoky-black-2);
+  }
   
   .contact-number {
     color: var(--gold-crayola);
@@ -655,6 +663,14 @@
     z-index: 2;
     transition: var(--transition-2);
   }
+
+  .navbar {
+    background-color: var(--white);
+  }
+
+  .navbar .close-btn ion-icon {
+    color: var(--black);
+  }
   
   .navbar.active {
     visibility: visible;
@@ -713,10 +729,24 @@
 
   .header.active .navbar-link:is(:hover, :focus-visible, .active) .span {
     color: var(--gold-crayola);
-    transform: translateX(20px);
   }
-  
-  
+
+  .header.active .navbar-link .span {
+    color: var(--black);
+  }
+
+  .header .navbar.active  .navbar-link .span {
+    color: var(--black);
+  }
+
+  .header.active .navbar-link:is(:hover, :focus-visible, .active) .span {
+    color: var(--gold-crayola);
+  }
+
+  .header .navbar.active .navbar-link:is(:hover, :focus-visible, .active) .span {
+    color: var(--gold-crayola);
+  }
+
   .navbar-link .separator {
     position: absolute;
     top: 50%;
