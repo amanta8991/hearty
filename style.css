@@ -160,7 +160,7 @@
   }
   
   body {
-    background-color: var(--eerie-black-1);
+    /* background-color: var(--eerie-black-1); */
     color: var(--white);
     font-family: var(--fontFamily-dm_sans);
     font-size: var(--fontSize-body-4);
@@ -307,14 +307,6 @@
     margin-block-end: 12px;
   }
   
-  .section-subtitle::after {
-    content: url('../images/separator.svg');
-    display: block;
-    width: 100px;
-    margin-inline: auto;
-    margin-block-start: 5px;
-  }
-  
   .btn {
     position: relative;
     color: var(--gold-crayola);
@@ -365,7 +357,7 @@
   
   .btn-secondary {
     background-color: var(--gold-crayola);
-    color: var(--black);
+    color: var(--white);
   }
   
   .btn-secondary::before { background-color: var(--smoky-black-1); }
@@ -586,11 +578,24 @@
     border-block-end: 1px solid transparent;
     transition: var(--transition-1);
   }
+
+  .header .logo2{
+    display: none;
+  }
+
+  .header.active .logo2{
+    display: block;
+  }
+
+  .header.active .logo1{
+    display: none;
+  }
   
   .header.active {
     padding-block: 20px;
-    background-color: var(--eerie-black-4);
+    background-color: var(--white);
     border-color: var(--black-alpha-15);
+    color: var(--black);
   }
   
   .header.hide {
@@ -605,6 +610,12 @@
     align-items: center;
     gap: 8px;
   }
+  
+  .header.active .btn-secondary::before { background-color: var(--white); }
+  
+  .header.active .btn-secondary .text-2 { color: var(--gold-crayola); }
+
+  .header .btn-secondary .text-2 { color: var(--gold-crayola); }
   
   .nav-open-btn {
     padding: 12px;
@@ -656,6 +667,10 @@
     border-radius: var(--radius-circle);
     margin-inline-start: auto;
     margin-block: 30px 20px;
+  }
+
+  .header.active .nav-open-btn .line{
+    background-color: var(--black);
   }
   
   .navbar .close-btn ion-icon { --ionicon-stroke-width: 40px; }
@@ -831,12 +846,14 @@
   .hero-btn img {
     margin-inline: auto;
     margin-block-end: 6px;
+    margin-top: 10px;
   }
   
   .hero-btn .span {
-    color: var(--black);
+    color: var(--white);
     font-weight: var(--weight-bold);
     text-transform: uppercase;
+    margin-top: 5px;
     letter-spacing: var(--letterSpacing-1);
     line-height: var(--lineHeight-3);
   }
@@ -876,9 +893,9 @@
   
   .hero .slider-item.active .btn { animation-delay: 2s; }
   
-  
-  
-  
+  .hero .btn .text-2 {
+    color: var(--white);
+  }
   
   /*-----------------------------------*\
     #SERVICE
@@ -1630,7 +1647,7 @@
   
     .hero .slider-btn:is(:hover, :focus-visible) {
       background-color: var(--gold-crayola);
-      color: var(--black);
+      color: var(--white);
     }
   
   
