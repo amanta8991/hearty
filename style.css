@@ -963,7 +963,10 @@
     #ABOUT
   \*-----------------------------------*/
   
-  .about .section-text { margin-block: 15px 30px; }
+  .about .section-text { 
+    margin-block: 15px 30px; 
+    color: var(--davys-grey);
+  }
   
   .about .btn {
     margin-inline: auto;
