@@ -953,7 +953,9 @@
   
   .service-card:is(:hover, :focus-within) .card-banner { transform: scale(1.05); }
   
-  .service .card-title { margin-block-end: 12px; }
+  .service .card-title { 
+    margin-top: 15px;
+  }
   
   
   
@@ -979,7 +981,7 @@
   
   .about .container {
     display: grid;
-    gap: 120px;
+    gap: 50px;
   }
   
   .about-banner {
@@ -1055,20 +1057,12 @@
     border-radius: var(--radius-24);
   }
   
-  .menu-card .card-title { transition: var(--transition-1); }
+  .menu-card .card-title { 
+    transition: var(--transition-1); 
+    color: var(--eerie-black-3);
+  }
   
   .menu-card .card-title:is(:hover, :focus-visible) { color: var(--gold-crayola); }
-  
-  .menu-card .badge {
-    background-color: var(--gold-crayola);
-    color: var(--eerie-black-1);
-    font-family: var(--fontFamily-forum);
-    max-width: max-content;
-    line-height: var(--lineHeight-6);
-    text-transform: uppercase;
-    padding-inline: 10px;
-    margin-block-start: 10px;
-  }
   
   .menu-card .span {
     color: var(--gold-crayola);
@@ -1090,6 +1084,10 @@
     margin-block-start: 26px;
   }
   
+  .menu .btn .text-2{
+    color: var(--white);
+  }
+
   .menu .shape {
     display: block;
     width: 70%;
