@@ -1467,7 +1467,6 @@
     :is(.service, .about) .section-text {
       max-width: 420px;
       margin-inline: auto;
-      color: var(--davys-grey);
     }
   
     .contact-number { --fontSize-body-1: 3rem; }
