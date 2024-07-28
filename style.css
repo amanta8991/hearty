@@ -309,6 +309,11 @@
     position: relative;
   }
 
+  .menu .img-cover{
+    width: 100px;
+    height: 100px;
+  }
+
   .section-subtitle {
     position: relative;
     color: var(--gold-crayola);
@@ -1244,6 +1249,11 @@
     color: var(--quick-silver);
     line-height: var(--lineHeight-6);
   }
+
+  .features .card-icon img{
+    width: 80px;
+    height: 80px;
+  }
   
   
   
@@ -1254,6 +1264,10 @@
   \*-----------------------------------*/
   
   .event .section-title { margin-block-end: 40px; }
+
+  .event .headline-1{
+    color: var(--white);
+  }
   
   .event-card {
     position: relative;
@@ -1297,6 +1311,9 @@
     margin-block-start: 40px;
   }
   
+  .event .btn .text-2{
+    color: var(--white);
+  }
   
   
   
@@ -1392,6 +1409,9 @@
     text-decoration: underline;
   }
   
+  .footer .grid-list{
+    gap: 20px;
+  }
   
   
   
@@ -1801,16 +1821,6 @@
       margin-inline: auto;
     }
   
-  
-  
-    /**
-     * RESERVATION
-     */
-  
-    .reservation-form {
-      display: grid;
-      grid-template-columns: 1fr 0.5fr;
-    }
   
   
   
