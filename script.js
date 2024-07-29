@@ -6,22 +6,12 @@ window.addEventListener("load", function () {
 });
 
 
-
-/**
- * add event listener on multiple elements
- */
-
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
 }
 
-
-
-/**
- * NAVBAR
- */
 
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
@@ -35,44 +25,6 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-
-
-/**
- * HEADER & BACK TOP BTN
- */
-
-const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-// let lastScrollPos = 0;
-
-// const hideHeader = function () {
-//   const isScrollBottom = lastScrollPos < window.scrollY;
-//   if (isScrollBottom) {
-//     header.classList.add("hide");
-//   } else {
-//     header.classList.remove("hide");
-//   }
-
-//   lastScrollPos = window.scrollY;
-// }
-
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY >= 50) {
-//     header.classList.add("active");
-//     backTopBtn.classList.add("active");
-//     hideHeader();
-//   } else {
-//     header.classList.remove("active");
-//     backTopBtn.classList.remove("active");
-//   }
-// });
-
-
-
-/**
- * HERO SLIDER
- */
 
 const heroSlider = document.querySelector("[data-hero-slider]");
 const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
@@ -112,9 +64,7 @@ const slidePrev = function () {
 
 heroSliderPrevBtn.addEventListener("click", slidePrev);
 
-/**
- * auto slide
- */
+
 
 let autoSlideInterval;
 
@@ -134,9 +84,6 @@ window.addEventListener("load", autoSlide);
 
 
 
-/**
- * PARALLAX EFFECT
- */
 
 const parallaxItems = document.querySelectorAll("[data-parallax-item]");
 
@@ -147,7 +94,6 @@ window.addEventListener("mousemove", function (event) {
   x = (event.clientX / window.innerWidth * 10) - 5;
   y = (event.clientY / window.innerHeight * 10) - 5;
 
-  // reverse the number eg. 20 -> -20, -5 -> 5
   x = x - (x * 2);
   y = y - (y * 2);
 
@@ -159,7 +105,7 @@ window.addEventListener("mousemove", function (event) {
 
 });
 
-// Get the button
+const header = document.querySelector("[data-header]");
 var mybutton = document.getElementById("backToTop");
 
 let lastScrollPos = 0;
@@ -175,9 +121,8 @@ const hideHeader = function () {
   lastScrollPos = window.scrollY;
 }
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     header.classList.add("active");
     mybutton.style.display = "block";
     hideHeader();
@@ -187,8 +132,7 @@ window.onscroll = function() {
   }
 };
 
-// When the user clicks on the button, scroll to the top of the document
 mybutton.onclick = function() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 };
