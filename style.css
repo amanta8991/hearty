@@ -377,7 +377,7 @@ body.nav-active {
   color: var(--white);
 }
 
-/* .has-before,
+.has-before,
 .has-after {
   position: relative;
   z-index: 1;
@@ -387,7 +387,7 @@ body.nav-active {
 .has-after::after {
   content: "";
   position: absolute;
-} */
+}
 
 .section {
   position: relative;
