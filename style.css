@@ -364,7 +364,7 @@ body.nav-active {
 }
 
 .btn-secondary {
-  background-color: var(--gold-crayola);
+  /* background-color: var(--gold-crayola); */
   color: var(--white);
 }
 
@@ -1543,7 +1543,7 @@ textarea.input-field {
   z-index: 4; 
   border: none; 
   outline: none; 
-  background-color: var(--black);
+  background-color: var(--gold-crayola);
   color: var(--white); 
   cursor: pointer; 
   padding: 10px; 
