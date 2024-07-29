@@ -44,29 +44,29 @@ addEventOnElements(navTogglers, "click", toggleNavbar);
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-let lastScrollPos = 0;
+// let lastScrollPos = 0;
 
-const hideHeader = function () {
-  const isScrollBottom = lastScrollPos < window.scrollY;
-  if (isScrollBottom) {
-    header.classList.add("hide");
-  } else {
-    header.classList.remove("hide");
-  }
+// const hideHeader = function () {
+//   const isScrollBottom = lastScrollPos < window.scrollY;
+//   if (isScrollBottom) {
+//     header.classList.add("hide");
+//   } else {
+//     header.classList.remove("hide");
+//   }
 
-  lastScrollPos = window.scrollY;
-}
+//   lastScrollPos = window.scrollY;
+// }
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 50) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-    hideHeader();
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
-});
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY >= 50) {
+//     header.classList.add("active");
+//     backTopBtn.classList.add("active");
+//     hideHeader();
+//   } else {
+//     header.classList.remove("active");
+//     backTopBtn.classList.remove("active");
+//   }
+// });
 
 
 
@@ -158,3 +158,37 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+// Get the button
+var mybutton = document.getElementById("backToTop");
+
+let lastScrollPos = 0;
+
+const hideHeader = function () {
+  const isScrollBottom = lastScrollPos < window.scrollY;
+  if (isScrollBottom) {
+    header.classList.add("hide");
+  } else {
+    header.classList.remove("hide");
+  }
+
+  lastScrollPos = window.scrollY;
+}
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    header.classList.add("active");
+    mybutton.style.display = "block";
+    hideHeader();
+  } else {
+    header.classList.remove("active");
+    mybutton.style.display = "none";
+  }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+mybutton.onclick = function() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
