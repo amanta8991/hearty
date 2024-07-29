@@ -122,7 +122,7 @@ const hideHeader = function () {
 }
 
 window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     header.classList.add("active");
     mybutton.style.display = "block";
     hideHeader();
