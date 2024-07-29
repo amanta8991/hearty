@@ -364,7 +364,7 @@ body.nav-active {
 }
 
 .btn-secondary {
-  /* background-color: var(--gold-crayola); */
+  background-color: var(--gold-crayola);
   color: var(--white);
 }
 
@@ -738,9 +738,6 @@ body.nav-active {
   transform: translateX(20px);
 }
 
-.header.active .navbar-link:is(:hover, :focus-visible, .active) .span {
-  color: var(--gold-crayola);
-}
 
 .header.active .navbar-link .span {
   color: var(--black);
