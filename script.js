@@ -105,34 +105,36 @@ window.addEventListener("mousemove", function (event) {
 
 });
 
-const header = document.querySelector("[data-header]");
-var mybutton = document.getElementById("backToTop");
+document.addEventListener("DOMContentLoaded", function() {
+  const header = document.querySelector("[data-header]");
+  var mybutton = document.getElementById("backToTop");
 
-let lastScrollPos = 0;
+  let lastScrollPos = 0;
 
-const hideHeader = function () {
-  const isScrollBottom = lastScrollPos < window.scrollY;
-  if (isScrollBottom) {
-    header.classList.add("hide");
-  } else {
-    header.classList.remove("hide");
+  const hideHeader = function () {
+    const isScrollBottom = lastScrollPos < window.scrollY;
+    if (isScrollBottom) {
+      header.classList.add("hide");
+    } else {
+      header.classList.remove("hide");
+    }
+
+    lastScrollPos = window.scrollY;
   }
 
-  lastScrollPos = window.scrollY;
-}
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      header.classList.add("active");
+      mybutton.style.display = "block";
+      hideHeader();
+    } else {
+      header.classList.remove("active");
+      mybutton.style.display = "none";
+    }
+  };
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    header.classList.add("active");
-    mybutton.style.display = "block";
-    hideHeader();
-  } else {
-    header.classList.remove("active");
-    mybutton.style.display = "none";
-  }
-};
-
-mybutton.onclick = function() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-};
+  mybutton.onclick = function() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+  };
+});
