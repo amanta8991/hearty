@@ -551,7 +551,7 @@ body.nav-active {
 
 .preload.loaded {
   transition-delay: 250ms;
-  transform: translateY(100%);
+  transform: translateY(500%);
 }
 
 .preload img {
