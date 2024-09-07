@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 600) {
       header.classList.add("active");
       mybutton.style.display = "block";
       hideHeader();

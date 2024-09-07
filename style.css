@@ -643,6 +643,18 @@ body.nav-active {
   animation-delay: 300ms;
 }
 
+.logo{
+  width: 160px;
+  height: 50px;
+}
+
+@media (max-width:425px){
+  .header .logo{
+    width: 120px;
+  height: 40px;
+  }
+}
+
 .navbar {
   position: fixed;
   background-color: var(--white);
@@ -895,7 +907,7 @@ body.nav-active {
 .hero-btn {
   position: absolute;
   bottom: 15px;
-  right: 15px;
+  left: 50px;
   z-index: 2;
   background-color: var(--gold-crayola);
   width: 110px;
@@ -1444,6 +1456,15 @@ textarea.input-field {
   color: var(--gold-crayola);
 }
 
+@media (max-width: 575px){
+  .slider-item .btn-secondary{
+    padding: 8px 40px;
+  }
+  .hero {
+    min-height: 100vh;
+  }
+}
+
 
 @media (min-width: 575px) {
 
@@ -1453,7 +1474,6 @@ textarea.input-field {
     --fontSize-body-2: 2rem;
 
   }
-
 
 
   :is(.service, .about) .section-text {
@@ -1645,7 +1665,57 @@ textarea.input-field {
 
 }
 
+@media (min-width: 900px){
+  .nav-open-btn,
+  .navbar>*:not(.navbar-list),
+  .header .overlay {
+    display: none;
+  }
 
+  .header .container {
+    max-width: unset;
+  }
+  .navbar,
+.navbar.active,
+.navbar-list {
+  all: unset;
+}
+.navbar,
+.navbar.active {
+  margin-inline: auto 20px;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-item {
+  border-block-start: none;
+}
+
+.navbar .separator {
+  display: none;
+}
+
+.navbar-link:is(:hover, :focus-visible, .active) .span {
+  transform: unset;
+}
+
+.navbar-link {
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--letterSpacing-1);
+}
+
+.navbar-link::after {
+  display: block;
+}
+
+.navbar-link.active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+}
 
 
 
@@ -1736,7 +1806,15 @@ textarea.input-field {
 
 }
 
+@media (max-width: 768px){
+  .hero .hero-btn {
+      display: none;
+  }
+}
 
+.slider-item .btn-secondary{
+  border-radius: 50px;
+}
 
 
 
@@ -1757,65 +1835,8 @@ textarea.input-field {
     margin-inline: auto;
   }
 
-
-  .nav-open-btn,
-  .navbar>*:not(.navbar-list),
-  .header .overlay {
-    display: none;
-  }
-
-  .header .container {
-    max-width: unset;
-  }
-
-  .navbar,
-  .navbar.active,
-  .navbar-list {
-    all: unset;
-  }
-
-  .navbar,
-  .navbar.active {
-    margin-inline: auto 20px;
-  }
-
-  .navbar-list {
-    display: flex;
-    gap: 30px;
-  }
-
-  .navbar-item {
-    border-block-start: none;
-  }
-
-  .navbar .separator {
-    display: none;
-  }
-
-  .navbar-link:is(:hover, :focus-visible, .active) .span {
-    transform: unset;
-  }
-
-  .navbar-link {
-    font-weight: var(--weight-bold);
-    letter-spacing: var(--letterSpacing-1);
-  }
-
-  .navbar-link::after {
-    display: block;
-  }
-
-  .navbar-link.active::after {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-
-  .header .btn {
-    margin-inline-start: 0;
-  }
-
   .hero {
-    height: 880px;
+    height: 800px;
   }
 
   .hero-btn {
@@ -1867,10 +1888,6 @@ textarea.input-field {
 
 
 @media (min-width: 1400px) {
-
-  .navbar {
-    margin-inline: auto;
-  }
 
   .about-content {
     padding-inline-end: 90px;
