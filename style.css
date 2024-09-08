@@ -370,7 +370,7 @@ body.nav-active {
 }
 
 .btn-secondary::before {
-  background-color: var(--white-alpha-10);
+  background-color: var(--black-alpha-15);
 }
 
 
@@ -1328,7 +1328,7 @@ textarea.input-field {
 .footer-brand {
   position: relative;
   padding: 50px 40px;
-  background: var(--smoky-black-1) url("../images/footer-form-bg.png");
+  background: var(--smoky-black-1) url("./images/footer-form-bg.png");
   background-position: center top;
   background-repeat: repeat;
 }
@@ -1338,7 +1338,7 @@ textarea.input-field {
   top: 0;
   width: 15px;
   height: 100%;
-  background-image: url("../images/footer-form-pattern.svg");
+  background-image: url("./images/footer-form-pattern.svg");
 }
 
 .footer-brand::before {
@@ -1812,9 +1812,6 @@ textarea.input-field {
   }
 }
 
-.slider-item .btn-secondary{
-  border-radius: 50px;
-}
 
 
 
